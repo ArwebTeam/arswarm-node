@@ -3,4 +3,5 @@ cache:
 swarm:
   listen:
     - /dnsaddr/stardust.mkg20001.io/wss/p2p-stardust/
+    - /tcp/5233/ip6/::/ws/
   bootstrap: []
