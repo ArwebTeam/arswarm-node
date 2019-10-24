@@ -1,0 +1,6 @@
+storage:
+  mongodb: 'mongodb://localhost:27017/arswarm'
+swarm:
+  listen:
+    - /dnsaddr/stardust.mkg20001.io/wss/p2p-stardust/
+  bootstrap: []

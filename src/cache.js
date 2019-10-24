@@ -3,11 +3,11 @@
 const Transaction = require('arweave/web/lib/transaction').default
 const DB = require('./storage')
 
-const ARQL = require('../arqlLocalExecutor')
+const ARQL = require('arswarm/src/arqlLocalExecutor')
 
-module.exports = async ({ }) => {
+module.exports = async ({ mongodb }) => {
   const txCache = new Map()
-  const { Tag, TX, KV } = await DB()
+  const { Tag, TX, KV } = await DB({ mongodb })
 
   const C = {
     add: async (data) => {

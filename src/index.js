@@ -1,6 +1,6 @@
 'use strict'
 
-const Swarm = require('../swarm')
+const Swarm = require('arswarm/src/swarm')
 const Cache = require('./cache')
 
 module.exports = async (config, arweave) => {

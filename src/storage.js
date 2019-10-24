@@ -38,5 +38,7 @@ module.exports = async ({ mongodb }) => {
     KV: mongoose.model('kv', kvSchema)
   }
 
+  await mongoose.connect(mongodb)
+
   return objs
 }
