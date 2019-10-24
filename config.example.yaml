@@ -1,4 +1,4 @@
-storage:
+cache:
   mongodb: 'mongodb://localhost:27017/arswarm'
 swarm:
   listen:
