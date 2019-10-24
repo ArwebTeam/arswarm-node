@@ -32,17 +32,17 @@ module.exports = async ({ mongodb }) => {
 
       txCache.set(data.id, tx)
       data._id = data.id
-      await TX.insertOne(data)
+      await TX.create(data)
     },
     del: async (id) => {
       if (!txCache.has(id) && !(await TX.findOne({ _id: id }))) {
         return
       }
 
-      txCache.delete(id)
+      txCache.deleteMany(id)
 
-      await Tag.delete({ filter: { tx: id } })
-      await TX.delete({ filter: { _id: id } })
+      await Tag.deleteMany({ filter: { tx: id } })
+      await TX.deleteMany({ filter: { _id: id } })
     },
     get: async (id) => {
       if (txCache.has(id)) {
@@ -67,11 +67,14 @@ module.exports = async ({ mongodb }) => {
     },
     kv: {
       set: async (key, val) => {
-        await KV.delete({ _id: key })
-        await KV.insertOne({ _id: key, val })
+        await KV.deleteMany({ _id: key })
+        await KV.create({ _id: key, val })
       },
       get: async (key) => {
-        return KV.findOne({ _id: key })
+        const res = await KV.findOne({ _id: key })
+        if (res) {
+          return res.val
+        }
       }
     }
   }

@@ -29,7 +29,7 @@ module.exports = async ({ mongodb }) => {
 
   const kvSchema = new Schema({
     _id: String,
-    val: String
+    val: Object
   })
 
   const objs = {
