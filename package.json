@@ -1,0 +1,19 @@
+{
+  "name": "arswarm-node",
+  "version": "0.0.1",
+  "description": "Arswarm Node is a standalone, mongoDB-backed arswarm instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "arswarm",
+    "node",
+    "arweave",
+    "arweb",
+    "realtime",
+    "sync"
+  ],
+  "author": "Maciej Krüger <mkg20001@gmail.com>",
+  "license": "MPL-2.0"
+}
