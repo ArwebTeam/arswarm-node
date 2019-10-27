@@ -1,6 +1,6 @@
 {
   "name": "arswarm-node",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Arswarm Node is a standalone, mongoDB-backed arswarm instance",
   "main": "index.js",
   "bin": {
