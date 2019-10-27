@@ -20,7 +20,7 @@
   "author": "Maciej Krüger <mkg20001@gmail.com>",
   "license": "MPL-2.0",
   "dependencies": {
-    "arswarm": "ArwebTeam/arswarm",
+    "arswarm": "^0.1.4",
     "arweave": "^1.5.3",
     "js-yaml": "^3.13.1",
     "mongoose": "^5.7.7"
